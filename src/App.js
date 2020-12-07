@@ -12,21 +12,30 @@ class App extends Component {
 
     render() {
        return (
+
            <div>
-               <ul>
-                   {
-                       this.props.products.map((product, index)=>(
-                           <div className='item' key={index}>
-                               <img className='img' src={product.images[1]}/>
-
+               {
+                   this.props.products.map((product, index)=>(
+                       <div className='product-wrap'>
+                           <div className='product-item'>
+                               <img src={product.images[1]}/>
+                               <div className='product-buttons'>
+                                   <a href='' className='button'>В Корзину</a>
+                               </div>
                            </div>
-                       ))
-                   }
+                           <div className='product-title'>
+                               <a href=''>{product.title}</a>
+                               <span className='product-price'>{ product.price} $</span>
+                           </div>
 
-               </ul>
-
-
+                       </div>
+                   ))
+               }
            </div>
+
+
+
+
        );
    }
 
