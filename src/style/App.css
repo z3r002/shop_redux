@@ -1,14 +1,12 @@
 .App {
   text-align: center;
 }
-li{
 
-}
 .item{
   display: flex;
   flex-flow: row wrap;
   margin: 30px;
-  justify-content: space-evenly;
+  justify-content: space-between;
   justify-items: center;
 
 }
